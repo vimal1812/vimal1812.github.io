@@ -4,23 +4,23 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 
 const projects = [
     {
-        title: 'AI Analytics Platform',
-        description: 'A comprehensive dashboard for visualizing complex datasets using Python and React. Features real-time data processing and predictive modeling.',
-        tags: ['Python', 'React', 'D3.js', 'Flask'],
+        title: 'Hand Gesture Mouse',
+        description: 'A computer vision–based virtual mouse system that allows users to control mouse movements and clicks using hand gestures captured through a webcam. Built using real-time image processing for accurate gesture detection.',
+        tags: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
         link: '#',
         github: '#'
     },
     {
-        title: 'E-Commerce Engine',
-        description: 'Scalable RESTful API designed for high-traffic online stores. Optimized for performance and security with automated testing pipelines.',
-        tags: ['Django', 'PostgreSQL', 'Redis', 'Docker'],
+        title: 'Parking Space Counter',
+        description: 'An intelligent parking management system that detects available and occupied parking slots using image processing techniques. Processes video frames to count free spaces and provide real-time parking availability insights.',
+        tags: ['Python', 'OpenCV', 'Computer Vision', 'Image Processing'],
         link: '#',
         github: '#'
     },
     {
-        title: 'Real-Time Chat App',
-        description: 'WebSocket-based messaging application with end-to-end encryption. Supports finding friends and creating group channels.',
-        tags: ['Vue.js', 'Firebase', 'Node.js'],
+        title: 'Django Todo List',
+        description: 'A simple yet secure task management application built using Django. Features user authentication with login and signup, allowing users to create, update, and delete personal to-do items.',
+        tags: ['Django', 'Python', 'Authentication', 'SQLite'],
         link: '#',
         github: '#'
     }
