@@ -60,7 +60,7 @@ const Contact = () => {
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
                     {[
                         { Icon: Github, href: 'https://github.com/vimal1812' },
-                        { Icon: Linkedin, href: 'www.linkedin.com/in/vimal-s-239462269' },
+                        { Icon: Linkedin, href: 'https://www.linkedin.com/in/vimal-s-239462269' },
                         { Icon: Twitter, href: '#' },
                         { Icon: Mail, href: 'mailto:vimalofficial1812@gmail.com' }
                     ].map(({ Icon, href }, i) => (
