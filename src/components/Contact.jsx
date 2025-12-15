@@ -59,10 +59,10 @@ const Contact = () => {
 
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
                     {[
-                        { Icon: Github, href: '#' },
-                        { Icon: Linkedin, href: '#' },
+                        { Icon: Github, href: 'https://github.com/vimal1812' },
+                        { Icon: Linkedin, href: 'www.linkedin.com/in/vimal-s-239462269' },
                         { Icon: Twitter, href: '#' },
-                        { Icon: Mail, href: 'mailto:hello@example.com' }
+                        { Icon: Mail, href: 'mailto:vimalofficial1812@gmail.com' }
                     ].map(({ Icon, href }, i) => (
                         <a key={i} href={href} style={{
                             color: 'var(--text-secondary)',
