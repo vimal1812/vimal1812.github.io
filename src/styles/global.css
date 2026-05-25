@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@500;700;900&display=swap');
 
 :root {
-  /* Premium Dark Palette */
-  --bg-primary: #030305;
-  --bg-secondary: #0a0a0f;
-  --bg-card: rgba(20, 20, 25, 0.6);
-  --bg-glass: rgba(10, 10, 15, 0.4);
+  /* Milder Soft Dark Palette */
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-card: rgba(31, 41, 55, 0.6);
+  --bg-glass: rgba(17, 24, 39, 0.4);
 
-  --text-primary: #f0f0f5;
-  --text-secondary: #a0a0b0;
-  --text-accent: #7070FF; /* Futuristic Blue-Purple */
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-accent: #818cf8; /* Soft Indigo */
   
   --accent-primary: #6366f1;
   --accent-secondary: #a855f7;
-  --accent-glow: rgba(99, 102, 241, 0.5);
+  --accent-glow: rgba(99, 102, 241, 0.35);
+
+  --border-card: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.03);
 
   /* Spacing */
   --space-sm: 0.5rem;
@@ -29,6 +32,25 @@
   --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+:root.light {
+  /* Milder Soft Silver-Grey Palette */
+  --bg-primary: #e2e8f0;
+  --bg-secondary: #cbd5e1;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-glass: rgba(255, 255, 255, 0.35);
+
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-accent: #4f46e5;
+  
+  --accent-primary: #4f46e5;
+  --accent-secondary: #9333ea;
+  --accent-glow: rgba(79, 70, 229, 0.08);
+
+  --border-card: rgba(99, 102, 241, 0.12);
+  --border-subtle: rgba(0, 0, 0, 0.06);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,6 +64,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 a {

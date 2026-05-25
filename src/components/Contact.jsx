@@ -4,16 +4,28 @@ import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
     return (
-        <footer id="contact" style={{
-            padding: '6rem 2rem 2rem',
-            background: 'linear-gradient(to top, var(--bg-secondary), var(--bg-primary))',
-            textAlign: 'center'
-        }}>
+        <motion.footer
+            id="contact"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            style={{
+                padding: '8rem 2rem 4rem',
+                background: 'linear-gradient(to top, var(--bg-secondary), var(--bg-primary))',
+                textAlign: 'center',
+                minHeight: 'calc(100vh - 8rem)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                boxSizing: 'border-box'
+            }}
+        >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                style={{ maxWidth: '600px', margin: '0 auto 6rem' }}
+                style={{ maxWidth: '600px', margin: 'auto' }}
             >
                 <h2 style={{
                     fontSize: '2.5rem',
@@ -31,7 +43,7 @@ const Contact = () => {
                     Currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </p>
 
-                <a href="mailto:hello@example.com" style={{
+                <a href="mailto:vimalofficial1812@gmail.com" style={{
                     display: 'inline-block',
                     padding: '1rem 2.5rem',
                     background: 'transparent',
@@ -88,11 +100,12 @@ const Contact = () => {
                 paddingTop: '2rem',
                 borderTop: '1px solid rgba(255, 255, 255, 0.05)',
                 color: 'var(--text-secondary)',
-                fontSize: '0.9rem'
+                fontSize: '0.9rem',
+                marginTop: '4rem'
             }}>
                 <p>Built with React, Vite & Framer Motion</p>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 
