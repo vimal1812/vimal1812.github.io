@@ -74,11 +74,7 @@ const Contact = () => {
                         { Icon: Github, href: 'https://github.com/vimal1812' },
                         { Icon: Linkedin, href: 'https://www.linkedin.com/in/vimal-s-239462269' },
                         { Icon: Twitter, href: '#' },
-<<<<<<< HEAD
-                        { Icon: Mail, href: 'mailto:vimalofficial1812@gmail.com.com' }
-=======
                         { Icon: Mail, href: 'mailto:vimalofficial1812@gmail.com' }
->>>>>>> 387c366b7ca4976c792294068e973830443168a6
                     ].map(({ Icon, href }, i) => (
                         <a key={i} href={href} style={{
                             color: 'var(--text-secondary)',
