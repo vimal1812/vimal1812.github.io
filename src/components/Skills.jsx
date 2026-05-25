@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = {
-    Backend: ['Python', 'Django', 'Flask', 'RESTful APIs'],
-    Data: ['NumPy', 'Pandas'],
-    Frontend: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Vue.js'],
-    Database: ['MySQL'],
-    Tools: ['Git', 'GitHub', 'Linux']
+    'Languages': ['Python', 'JavaScript', 'SQL'],
+    'Backend Frameworks': ['Django', 'Flask', 'Node.js', 'Frappe / ERPNext'],
+    'Frontend': ['HTML', 'CSS', 'JavaScript', 'React.js'],
+    'Databases': ['MySQL', 'SQLite'],
+    'Tools & Concepts': ['Git', 'GitHub', 'REST APIs', 'OOP', 'Database Optimization', 'Authentication']
 };
 
 const SkillCard = ({ category, items, index }) => {
@@ -20,7 +20,7 @@ const SkillCard = ({ category, items, index }) => {
                 background: 'var(--bg-card)',
                 padding: '2rem',
                 borderRadius: '20px',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                border: '1px solid var(--border-card)',
                 position: 'relative',
                 overflow: 'hidden'
             }}
@@ -53,7 +53,7 @@ const SkillCard = ({ category, items, index }) => {
                             background: 'rgba(255, 255, 255, 0.03)',
                             borderRadius: '50px',
                             fontSize: '0.9rem',
-                            border: '1px solid rgba(255, 255, 255, 0.05)',
+                            border: '1px solid var(--border-card)',
                             color: 'var(--text-secondary)',
                             transition: 'all 0.3s ease'
                         }}
@@ -78,11 +78,19 @@ const SkillCard = ({ category, items, index }) => {
 
 const Skills = () => {
     return (
-        <section id="skills" style={{
-            padding: '8rem 2rem',
-            maxWidth: '1200px',
-            margin: '0 auto'
-        }}>
+        <motion.section
+            id="skills"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            style={{
+                padding: '8rem 2rem',
+                maxWidth: '1200px',
+                margin: '0 auto',
+                minHeight: 'calc(100vh - 8rem)'
+            }}
+        >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +125,7 @@ const Skills = () => {
                     />
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 };
 
