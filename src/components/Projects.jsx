@@ -4,25 +4,60 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 
 const projects = [
     {
-        title: 'Hand Gesture Mouse',
-        description: 'A computer vision–based virtual mouse system that allows users to control mouse movements and clicks using hand gestures captured through a webcam. Built using real-time image processing for accurate gesture detection.',
+        title: 'AIVirtualMouse',
+        description: 'Developed a real-time gesture-based virtual mouse using OpenCV and MediaPipe. Implemented hand tracking algorithms for cursor movement and click detection, and optimized the processing pipeline for smooth, responsive performance.',
         tags: ['Python', 'OpenCV', 'MediaPipe', 'Computer Vision'],
-        link: '#',
-        github: '#'
+        link: 'https://github.com/vimal1812/Hand-Gesture-Mouse',
+        github: 'https://github.com/vimal1812/Hand-Gesture-Mouse'
     },
     {
         title: 'Parking Space Counter',
-        description: 'An intelligent parking management system that detects available and occupied parking slots using image processing techniques. Processes video frames to count free spaces and provide real-time parking availability insights.',
+        description: 'An intelligent parking management system that detects available and occupied parking slots using image processing. Processes video frames to count free spaces and provide real-time parking availability insights.',
         tags: ['Python', 'OpenCV', 'Computer Vision', 'Image Processing'],
-        link: '#',
-        github: '#'
+        link: 'https://github.com/vimal1812/Parking-Space-Counter',
+        github: 'https://github.com/vimal1812/Parking-Space-Counter'
     },
     {
-        title: 'Django Todo List',
-        description: 'A simple yet secure task management application built using Django. Features user authentication with login and signup, allowing users to create, update, and delete personal to-do items.',
-        tags: ['Django', 'Python', 'Authentication', 'SQLite'],
-        link: '#',
-        github: '#'
+        title: 'Multi-User To-Do Application',
+        description: 'Designed and developed a scalable multi-user task management system using Django. Implemented secure authentication, optimized CRUD operations with efficient SQL queries, and ensured data isolation per user. Improved application responsiveness through backend query optimization.',
+        tags: ['Django', 'Python', 'SQLite', 'Authentication'],
+        link: 'https://github.com/vimal1812/ToDoList-Django',
+        github: 'https://github.com/vimal1812/ToDoList-Django'
+    },
+    {
+        title: 'Grocery Store Application',
+        description: 'Built a robust backend-driven grocery store application using Flask and relational databases. Designed and implemented RESTful APIs for product browsing, cart management, and user interactions, while optimizing database queries for a clean routing structure.',
+        tags: ['Flask', 'Python', 'MySQL', 'REST APIs'],
+        link: 'https://github.com/vimal1812/Grocery-Store-Application',
+        github: 'https://github.com/vimal1812/Grocery-Store-Application'
+    },
+    {
+        title: 'Expense Tracker',
+        description: 'Developed REST APIs using Node.js for personal expense tracking with categorized transaction management. Implemented structured database schemas and optimized queries for handling large transaction records, focusing on modular, clean, and testable code.',
+        tags: ['Node.js', 'JavaScript', 'REST APIs', 'Database Design'],
+        link: 'https://github.com/vimal1812',
+        github: 'https://github.com/vimal1812'
+    },
+    {
+        title: 'Performance Tracking',
+        description: 'Developed a robust team performance tracking and project management web application designed to track tasks, log milestones, and monitor team productivity metrics.',
+        tags: ['JavaScript', 'React.js', 'Node.js', 'Project Management'],
+        link: 'https://github.com/vimal1812/Performance-tracking',
+        github: 'https://github.com/vimal1812/Performance-tracking'
+    },
+    {
+        title: 'TechInsights B2B Website',
+        description: 'Built a professional, high-performance business catalog and B2B portal for the TechInsights organization using Vue.js, featuring clean component-based routing.',
+        tags: ['Vue.js', 'Frontend', 'B2B', 'Web Development'],
+        link: 'https://github.com/vimal1812/TechInsights-ai-org-KushiB2B-website',
+        github: 'https://github.com/vimal1812/TechInsights-ai-org-KushiB2B-website'
+    },
+    {
+        title: 'Basic Tic-Tac-Toe',
+        description: 'A classic interactive Tic-Tac-Toe game built with React.js featuring state management, turn indicators, win/draw condition evaluations, and high-performance rendering.',
+        tags: ['React.js', 'JavaScript', 'Games', 'Frontend'],
+        link: 'https://github.com/vimal1812/Basic-Tic-Tac-Toe-in-React',
+        github: 'https://github.com/vimal1812/Basic-Tic-Tac-Toe-in-React'
     }
 ];
 
@@ -36,7 +71,7 @@ const ProjectCard = ({ project, index }) => {
             style={{
                 background: 'var(--bg-card)',
                 borderRadius: '24px',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
+                border: '1px solid var(--border-card)',
                 padding: '2rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -99,11 +134,19 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
     return (
-        <section id="projects" style={{
-            padding: '8rem 2rem',
-            maxWidth: '1200px',
-            margin: '0 auto'
-        }}>
+        <motion.section
+            id="projects"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            style={{
+                padding: '8rem 2rem',
+                maxWidth: '1200px',
+                margin: '0 auto',
+                minHeight: 'calc(100vh - 8rem)'
+            }}
+        >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +177,7 @@ const Projects = () => {
                     <ProjectCard key={index} project={project} index={index} />
                 ))}
             </div>
-        </section>
+        </motion.section>
     );
 };
 
