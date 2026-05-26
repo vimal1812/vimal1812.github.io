@@ -92,3 +92,81 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-primary);
 }
+
+/* ==========================================
+   Mobile Responsiveness Overrides
+   ========================================== */
+@media (max-width: 768px) {
+  /* Fluid Spacing & Paddings */
+  #home, #skills, #experience, #projects, #contact {
+    padding: 5.5rem 1.25rem 3.5rem 1.25rem !important;
+    min-height: auto !important;
+  }
+
+  /* Grid Layouts Stacked Vertically */
+  #home > div,
+  #skills > div,
+  #experience > div,
+  #projects > div {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Specific Adjustments */
+  #home {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  #home > div > div {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  #home > div > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home > div > div:first-of-type > div {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Scale headers slightly */
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem) !important;
+  }
+
+  /* Adjust experience details and spacing */
+  #experience > div > div > div:first-of-type {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Adjust buttons */
+  .hero-buttons {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Hide decorative icons on mobile */
+  .hero-decor-icon {
+    display: none !important;
+  }
+
+  /* Timeline cards spacing on mobile */
+  .timeline-card {
+    padding: 1.25rem !important;
+  }
+
+  /* Project cards spacing on mobile */
+  .project-card {
+    padding: 1.25rem !important;
+  }
+}
+
+
+
