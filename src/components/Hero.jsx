@@ -119,6 +119,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.45 }}
+                        className="hero-buttons"
                         style={{
                             display: 'flex',
                             gap: '1rem',
@@ -222,6 +223,7 @@ const Hero = () => {
             <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="hero-decor-icon"
                 style={{ position: 'absolute', top: '15%', left: '5%', color: 'var(--text-secondary)', opacity: 0.08, zIndex: 0 }}
             >
                 <Server size={40} />
@@ -229,6 +231,7 @@ const Hero = () => {
             <motion.div
                 animate={{ y: [0, 20, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="hero-decor-icon"
                 style={{ position: 'absolute', bottom: '15%', right: '5%', color: 'var(--text-secondary)', opacity: 0.08, zIndex: 0 }}
             >
                 <Database size={40} />
@@ -236,6 +239,7 @@ const Hero = () => {
             <motion.div
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                className="hero-decor-icon"
                 style={{ position: 'absolute', top: '25%', right: '15%', color: 'var(--text-secondary)', opacity: 0.08, zIndex: 0 }}
             >
                 <Code size={40} />

@@ -68,6 +68,7 @@ const ProjectCard = ({ project, index }) => {
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ y: -10 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
+            className="project-card"
             style={{
                 background: 'var(--bg-card)',
                 borderRadius: '24px',

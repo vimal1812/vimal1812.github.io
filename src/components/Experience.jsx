@@ -54,6 +54,7 @@ const ExperienceCard = ({ item, type, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
+            className="timeline-card"
             style={{
                 background: 'var(--bg-card)',
                 borderRadius: '24px',
